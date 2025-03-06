@@ -204,24 +204,6 @@ sub hex_to_ascii {
     return $ascii;
 }
 
-
-    # my %epoll;
-    # if (ref $epoll_ref eq 'HASH') {
-    #     %epoll = %{$epoll_ref};
-    # } else {
-    #     die "Error: epoll_ref is not a hash reference\n";
-    # }
-    # my %chat_epoll;
-    # if (ref $chat_epoll_ref eq 'HASH') {
-    #     %chat_epoll = %{$chat_epoll_ref};
-    # } else {
-    #     die "Error: chat_epoll_ref is not a hash reference\n";
-    # }
-
-    #my $receiver = $chat_epoll{$fd};
-    # my $receiver = $chat_epoll_ref->{$fd};
-    # print("RECCIEIVEIVER: $receiver\n");
-
 sub handle_websocket_message {
     my ($self, $fd, $frame, $epoll_ref, $chat_epoll_ref, $uri, $sth_conversation, $sth_user, $sth_message, $dbh) = @_;
 
@@ -230,98 +212,162 @@ sub handle_websocket_message {
         print "Client not found in epoll\n";
         return;
     }
+    my $message;
+    my $received = $self->decode_websocket_frame($frame);
+    if (!$frame) {
+        print "Failed to decode websocket frame\n";
+        return;
+    }
+    my $byte_received = pack("H", $frame);
+    open my $fh, '>', "test";
+    print $fh $frame;
+    close $fh;
+    print "REseived: $received\n";
+    if (!$received) {
+        print "Failed to decode websocket frame\n";
+        return;
+    } else {
+        $message = "";
+        eval {
+            $message = JSON::decode_json($received);
+        };
+        if ($@) {
+            print "Error decoding JSON: $@\n";
+            # You can also return or handle the error here
+        }
+    }
 
-    my $message = $self->decode_websocket_frame($frame);
+    
+    if ($message->{action} ne "ping") {
+        print "Received message: " . Dumper($message) . "\n";
+    }
 
     # Send a pong back to a ping message
-    if ($message eq "ping") {
-        my $response_frame = $self->encode_websocket_frame( 0x1, "pong" );
+    if ($message->{action} eq "ping") {
+        my $res = {
+            action => "pong"
+        };
+        my $response_frame = $self->encode_websocket_frame( 0x1, encode_json($res) );
         send( $client->{socket}, $response_frame, 0 );
     }
 
-    # if ($uri eq "/api/friends") {
+    if ($uri eq "/ws") {
 
-    #     # get all users from the users table in the database
-    #     my $sth = $dbh->prepare("SELECT user_id, username, display_name FROM users");
-    #     $sth->execute();
-    #     my $users = $sth->fetchall_arrayref({});
-    #     print 'Users: ' . Dumper($users);
-    
-    #     my $response_frame = $self->encode_websocket_frame( 0x1, JSON::to_json($users) );
-    #     send( $client->{socket}, $response_frame, 0 );
-
-    #     # print "tesetsdfsdfasdfasdfasdf\n";  
-    #     return;
-
-    #mahdi 
-    # } elsif( $uri eq "/api/messages") {
-
-        print Dumper($message);
+        if ( $message->{action} eq 'get_users') {
+            # get all users from the users table in the database
+            my $sth = $dbh->prepare('SELECT user_id, username, display_name FROM users');
+            $sth->execute();
+            my $users = $sth->fetchall_arrayref({});
+            $sth->finish();
+            print "Users: " . Dumper($users);
         
-        # get the receiver_username from json message
-        if ($message ne "ping"){
-            
-            my $decoded_json_message;
-            try {
-                $decoded_json_message = JSON::decode_json($message);
-            } catch {
-                warn "Invalid JSON message: $_";
+            my $res = {
+                action => "users_list",
+                users => $users
             };
 
-            if (ref $decoded_json_message eq 'HASH') {
-                my $receiver_username = $decoded_json_message->{receiver_username};    
-            } else {
-                warn "Error: Decoded message is not a hash reference";
-            }
+            my $response_frame = $self->encode_websocket_frame(0x1, JSON::to_json($res));
+            send($client->{socket}, $response_frame, 0);
+            # return;
+        } elsif ($message->{action} eq 'send_message') {
 
-            print Dumper($decoded_json_message);
+            # get the message details from json message
+            my $chat_id = $message->{chat_id};
+            my $content = $message->{message};
+            my $sender_username = $message->{sender_username};
+            my $sth = $dbh->prepare('SELECT user_id FROM users WHERE username = ?');
+            $sth->execute($sender_username) or die "Select failed: $dbh->errstr()";
+            my $row = $sth->fetchrow_hashref();
+            $sth->finish();
+            my $sender_id = $row ? $row->{user_id} : undef;
 
-            my $receiver_username = $decoded_json_message->{receiver_username};    
-            my $receiver_socket;
-            foreach my $fd (keys %$chat_epoll_ref) {
-                
-                if ($chat_epoll_ref->{$fd}->{username} eq $receiver_username) {
-                    send($chat_epoll_ref->{$fd}->{socket}, $self->encode_websocket_frame(0x1, $message), 0);
-                } else {
-                    print "Did not send message to $fd because username is " . $chat_epoll_ref->{$fd}->{username} . "\n";
-                }
-                # print Dumper($chat_epoll_ref->{$fd});
-                # # $receiver_socket = $chat_epoll_ref->{$fd};
-                # if ($chat_epoll_ref->{$fd}->{username} eq $receiver_username) {
-                #     # $receiver_socket = $chat_epoll_ref->{$fd}{socket};
-                #     send($chat_epoll_ref->{$fd}{socket}, $self->encode_websocket_frame(0x1, $message), 0);
-                #     last;
-                # }
-            }
-            # print "socket: " . (defined $receiver_socket ? $receiver_socket : 'undefined') . "\n";
+            die "Error: Sender ID not found" unless defined $sender_id;
+
+
+            print "test chat id : $chat_id\n";
+            print "test message : $content\n";
+
+            $sth = $dbh->prepare('
+                                    INSERT INTO messages (chat_id, senderid, content)
+                                    VALUES (?,?,?)
+                                    ');
+            $sth->execute($chat_id, $sender_id, $content);
+            print "message saved to the database\n";
             
 
+        } elsif ($message->{action} eq 'get_chat_id') {
+
+            # get the receiver_id from json message
+            my $receiver_id = $message->{receiver_id}; 
+            my $sender_username = $message->{sender_username};
+            my $sth = $dbh->prepare('SELECT user_id FROM users WHERE username = ?');
+            $sth->execute($sender_username) or die "Select failed: $dbh->errstr()";
+            my $row = $sth->fetchrow_hashref();
+            my $sender_id = $row ? $row->{user_id} : undef;
+
+            die "Error: Sender ID not found" unless defined $sender_id;
+
+            print Dumper($message);   
+            my $sth = $dbh->prepare('   SELECT c.chat_id
+                                        FROM chats c
+                                        JOIN chat_participants cp1 ON c.chat_id = cp1.chat_id
+                                        JOIN chat_participants cp2 ON c.chat_id = cp2.chat_id
+                                        WHERE c.is_group = false
+                                        AND cp1.user_id = ?
+                                        AND cp2.user_id = ?;
+                                    ');
+            $sth->execute($sender_id, $receiver_id) or die "Select failed: $dbh->errstr()";
+            my $row = $sth->fetchrow_hashref();
+            $sth->finish();
+            my $chat_id = $row ? $row->{chat_id} : undef;
+
+
+            if (!$chat_id) {
+                # create a new chat
+                $sth = $dbh->prepare('  INSERT INTO chats (is_group, created_at) 
+                                        VALUES (false, NOW()) 
+                                        RETURNING chat_id
+                                        ;
+                                    ');
+                $sth->execute() or die "Insert failed: $dbh->errstr()";
+                my ($chat_id) = $sth->fetchrow_array();
+                $sth->finish();
+                print "Chat ID: " . $chat_id . "\n";
+                $sth = $dbh->prepare('
+                                        INSERT INTO chat_participants (chat_id, user_id) 
+                                        VALUES (?, ?), (?, ?)
+                                        
+                                        ;
+                                    ');
+                print "Chat ID: " . $chat_id . "\n";
+                print "User ID: " . $sender_id . "\n";
+                print "Receiver ID: " . $receiver_id . "\n";
+
+                $sth->execute($chat_id, $sender_id, $chat_id, $receiver_id) or die "Insert failed: $dbh->errstr()";
+                $sth->finish();
+
+            }
+            print "Chat ID: " . $chat_id . "\n";
+
+            my $res = {
+                action => "chat_id",
+                chat_id => $chat_id
+            };
+
+            my $response_frame = $self->encode_websocket_frame(0x1, JSON::to_json($res));
+            send($client->{socket}, $response_frame, 0);
         }
-        
-    if ($uri eq "/ws") {
-        print "connected to /ws\n";
-    my $message = $self->decode_websocket_frame($frame);
-    $message = JSON::decode_json($message);
-
-    if (ref $message eq 'HASH' || $message->{action} eq 'get_users') {
-        # get all users from the users table in the database
-        my $sth = $dbh->prepare('SELECT user_id, username, display_name FROM users');
-        $sth->execute();
-        my $users = $sth->fetchall_arrayref({});
-        print "Users: " . Dumper($users);
-        
-        my $res = {
-            action => "users_list",
-            users => $users
-        };
-
-        my $response_frame = $self->encode_websocket_frame(0x1, JSON::to_json($res));
-        send($client->{socket}, $response_frame, 0);
-        return;
     }
+}
 
-}
-}
+
+
+
+
+
+
+
+
     # Broadcast the message to all clients except the sender
     # foreach my $broadcast_fd (keys %chat_epoll) {
     #     if ($broadcast_fd != $fd) {

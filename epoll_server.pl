@@ -15,7 +15,7 @@ use DBI;
 # Including libraries
 use lib qw(../);
 use lib '.';
-use HTTP_Request; # New library
+use HTTP_Request; 
 use html_pages;
 use HTTP_RESPONSE;
 use webSocket_utils;
@@ -82,7 +82,7 @@ $dbh->do(q{
 
 
 # Prepare insert statement
-my $sth_user = $dbh->prepare(q{INSERT INTO users (username, password, email, display_name, is_admin) VALUES (?, ?, ?, ?, ?)})
+my $sth_user = $dbh->prepare(q{INSERT INTO users (username, password, email, display_name, is_admin) VALUES (?, ?, ?, ?, ?) RETURNING user_id})
     or die "Prepare statement failed: $dbh->errstr()";
 my $sth_chat = $dbh->prepare(q{INSERT INTO chats (chat_name, is_group) VALUES (?, ?)})
     or die "Prepare statement failed: $dbh->errstr()";
@@ -208,7 +208,7 @@ sub main_loop {
 
 sub start_server {
     print "Starting server on port 8080... \n";
-    system("curl -d 'Server started on port 8080' 10.31.1.1/epoll_server");
+    # system("curl -d 'Server started on port 8080' 10.31.1.1/epoll_server");
     menu_utils::write_log("INFO", "Socket", "starting server on port 8080...");
 
     $epoll{server_epoll} = epoll_create(10);
@@ -245,7 +245,7 @@ sub start_server {
                 my ( $client_port, $client_ip ) = sockaddr_in($client_addr);
                 my $client_ip_str = inet_ntoa($client_ip);
                 print "Client connected from $client_ip_str:$client_port\n";
-                system("curl -d 'Client connected from $client_ip_str:$client_port' 10.31.1.1/epoll_server");
+                # system("curl -d 'Client connected from $client_ip_str:$client_port' 10.31.1.1/epoll_server");
 
                 menu_utils::write_log("INFO", "Socket", "Client connected from $client_ip_str:$client_port");
 
@@ -311,7 +311,7 @@ sub handle_http_request {
         menu_utils::write_log("ERROR", "Socket", "Invalid HTTP request");
         return;
     }
-    print "test\n";
+    # print "test\n";
     my $method = $req->method;
     my $uri    = $req->uri;
     print "Method: $method, URI: $uri\n";
@@ -420,7 +420,7 @@ sub handle_http_request {
             my $icon_data = html_pages::get_favicon();
             my $response = HTTP_RESPONSE::GET_OK_200_favicon($icon_data);
             send( $client->{socket}, $response, 0 );
-            disconnect_client($fd, "favicon.ico");
+            # disconnect_client($fd, "favicon.ico");
         } else {
             my $response = HTTP_RESPONSE::NOT_FOUND_404(html_pages::get_html_page("404"));
             send( $client->{socket}, $response, 0 );
@@ -488,6 +488,7 @@ sub handle_http_request {
 
             my ($password_db, $user_id) = $sth_user->fetchrow_array();
 
+
             print "Password from database: $password_db\n";
             print "Password from userinput: $password_hash\n";
 
@@ -513,6 +514,8 @@ sub handle_http_request {
                 username => $username,
                 user_id => $user_id,
             };
+
+            $epoll{$fd}{user_id} = $user_id;
             print "Chat Epoll:: \n";
             print Dumper(%chat_epoll);
             print "\n";
@@ -571,6 +574,15 @@ sub handle_http_request {
             # Add the user to the database
             $sth_user->execute($username, $password_hash, $email, $display_name, 0);
 
+            my $user_id = $sth_user->fetchall_arrayref({})->[0]->{chat_id};
+            print "User ID: $user_id\n";
+
+            # add the user id to the chat_epoll
+            $chat_epoll{$fd} = {
+                socket => $client->{socket},
+                username => $username,
+                user_id => $user_id,
+            };
             
 
             $client->{username} = $username;
@@ -591,7 +603,7 @@ sub disconnect_client {
     my $client = $epoll{$fd};
 
     print "Client $client->{ip}:$client->{port} ÄÄ $fd ÄÄ disconnected.\n";
-    system("curl -d 'Client $client->{ip}:$client->{port} ÄÄ $fd ÄÄ disconnected.' 10.31.1.1/epoll_server");
+    # system("curl -d 'Client $client->{ip}:$client->{port} ÄÄ $fd ÄÄ disconnected.' 10.31.1.1/epoll_server");
     menu_utils::write_log("INFO", "Socket", "Client disconnected");
 
     print "Disconnected: $message\n" if $message;

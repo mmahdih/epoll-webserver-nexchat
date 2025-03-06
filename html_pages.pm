@@ -221,12 +221,14 @@ HTML
     const sendMessageButton = document.getElementById('sendMessage');
     const friendsList = document.getElementById('friendsList');
     let users = [];
+    let chat_id;
 
     // Connect to WebSocket server
     const ws = new WebSocket("ws://10.31.1.1:8080/ws");
 
     ws.onopen = () => {
         console.log("Connected to server");
+        ws.send(JSON.stringify({ action: "ping" }));
         ws.send(JSON.stringify({ action: "get_users" })); // Request user list
     };
 
@@ -241,6 +243,15 @@ HTML
                 users = received_data.users;
                 console.log("test");
                 renderFriendsList();
+            } else if (received_data.action === "new_message") {
+                displayMessage(received_data.message, "friend");
+            } else if (received_data.action === "pong") {
+                const timeout = setTimeout(() => {
+                ws.send(JSON.stringify({ action: "ping" }));
+                }, 1000);
+            } else if (received_data.action === "chat_id") {
+                chat_id = received_data.chat_id;
+                console.log("Chat ID:", chat_id);
             } else if (received_data.action === "new_message") {
                 displayMessage(received_data.message, "friend");
             }
@@ -261,9 +272,22 @@ HTML
         });
     }
 
+    
+
     // Event delegation for friend selection
     friendsList.addEventListener("click", (event) => {
-        if (event.target.classList.contains("friend")) {
+        // ask server to create a chat and send the chat id
+        // get the user id from cookies
+        let sender_username = document.cookie.split("; ").find(row => row.startsWith("username=")).split("=")[1];
+        const messageData = {
+            action: "get_chat_id",
+            receiver_id: users.find(user => user.display_name === event.target.getAttribute("data-name")).user_id,
+            sender_username: sender_username
+        }
+        ws.send(JSON.stringify(messageData));
+
+        if (typeof chat_id !== 'undefined') {
+            if (event.target.closest(".friend")) {
             document.querySelectorAll(".friend").forEach(f => f.classList.remove("bg-white"));
             event.target.classList.add("bg-white");
 
@@ -271,6 +295,9 @@ HTML
             console.log("Selected friend:", friendName);
 
             messagesContainer.innerHTML = ""; // Clear messages when switching chat
+        }
+        } else {
+            console.log("No chat selected.");
         }
     });
 
@@ -280,10 +307,13 @@ HTML
         console.log("Sending message:", messageText);
         if (!messageText) return;
 
+        let sender_username = document.cookie.split("; ").find(row => row.startsWith("username=")).split("=")[1];
+
         const messageData = {
             action: "send_message",
-            to: "SelectedFriend", // Replace with actual selected friend
-            message: messageText
+            chat_id: chat_id, // Replace with actual selected friend
+            message: messageText,
+            sender_username: sender_username
         };
         ws.send(JSON.stringify(messageData));
         displayMessage(messageText, "own");
@@ -702,7 +732,7 @@ HTML
 
 
 sub get_favicon {
-    open my $icon, '<', '/home/lapdev/Mein/Websocket_Server/bilder/favicon.ico' or die $!;
+    open my $icon, '<', '/home/lapdev/Mein/epoll-webserver-nexchat/bilder/favicon.ico' or die $!;
     binmode $icon;
 
     my $icon_data = do { local $/; <$icon> };

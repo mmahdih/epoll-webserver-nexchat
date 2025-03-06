@@ -23449,3 +23449,1212 @@ Tue Mar  4 10:09:51 2025 - [INFO] [Socket] Client disconnected
 Tue Mar  4 10:09:52 2025 - [INFO] [Socket] Client connected from 10.31.0.254:49401
 Tue Mar  4 10:09:52 2025 - [INFO] [Socket] WebSocket connection established
 Tue Mar  4 10:09:52 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:01:16 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:01:16 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:01:16 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:01:35 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51438
+Tue Mar  4 12:01:35 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:01:36 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51441
+Tue Mar  4 12:01:36 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:01:36 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:21:26 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51632
+Tue Mar  4 12:21:26 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51634
+Tue Mar  4 12:21:26 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:21:27 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51636
+Tue Mar  4 12:21:42 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:21:42 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:21:42 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:21:44 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51650
+Tue Mar  4 12:21:44 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51651
+Tue Mar  4 12:21:44 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:21:56 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:21:56 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:21:56 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:21:59 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51657
+Tue Mar  4 12:21:59 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51658
+Tue Mar  4 12:21:59 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:22:00 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:22:00 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51659
+Tue Mar  4 12:22:37 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:22:37 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:22:37 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:22:40 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51667
+Tue Mar  4 12:22:40 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51669
+Tue Mar  4 12:22:40 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:22:40 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:22:42 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51670
+Tue Mar  4 12:22:42 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51671
+Tue Mar  4 12:22:43 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:23:50 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:23:51 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51680
+Tue Mar  4 12:23:51 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51682
+Tue Mar  4 12:23:51 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:23:51 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:23:54 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51685
+Tue Mar  4 12:23:55 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:23:55 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51686
+Tue Mar  4 12:23:57 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:23:58 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51687
+Tue Mar  4 12:23:59 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:24:00 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51689
+Tue Mar  4 12:24:00 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51690
+Tue Mar  4 12:24:00 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:24:00 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:25:46 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:43:22 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:43:22 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:43:22 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:43:25 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51842
+Tue Mar  4 12:43:25 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:43:26 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51845
+Tue Mar  4 12:43:26 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:43:26 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:44:16 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:44:16 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:44:16 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:44:18 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51852
+Tue Mar  4 12:44:18 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:44:19 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51853
+Tue Mar  4 12:44:19 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:44:19 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:44:38 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:44:38 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:44:38 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:44:40 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51855
+Tue Mar  4 12:44:40 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:44:41 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51856
+Tue Mar  4 12:44:41 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:44:41 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:45:17 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:45:17 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:45:17 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:45:19 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51862
+Tue Mar  4 12:45:19 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:45:20 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51863
+Tue Mar  4 12:45:20 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:45:20 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:45:42 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:45:42 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:45:42 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:45:43 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51866
+Tue Mar  4 12:45:44 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:45:44 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51867
+Tue Mar  4 12:45:44 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:45:44 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:46:22 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:46:22 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:46:22 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:46:24 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51870
+Tue Mar  4 12:46:24 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:46:25 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51873
+Tue Mar  4 12:46:25 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:46:25 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:47:09 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:47:09 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:47:09 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:47:10 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51880
+Tue Mar  4 12:47:11 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:47:11 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51881
+Tue Mar  4 12:47:11 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:47:11 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:48:54 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:48:54 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:48:54 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:48:56 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51894
+Tue Mar  4 12:48:56 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:48:57 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51895
+Tue Mar  4 12:48:57 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:48:57 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:49:11 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:49:11 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:49:11 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:49:13 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51898
+Tue Mar  4 12:49:14 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:49:14 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51899
+Tue Mar  4 12:49:14 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:49:14 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:52:25 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:52:25 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:52:25 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:52:27 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51920
+Tue Mar  4 12:52:27 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:52:27 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51922
+Tue Mar  4 12:52:27 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:52:27 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:53:40 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:53:40 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:53:40 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:53:42 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51929
+Tue Mar  4 12:53:42 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:53:43 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51930
+Tue Mar  4 12:53:43 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:53:43 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:54:26 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:54:26 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:54:26 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:54:28 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51935
+Tue Mar  4 12:54:28 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:54:29 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51936
+Tue Mar  4 12:54:29 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:54:29 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:55:43 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:55:43 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:55:43 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:55:44 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51945
+Tue Mar  4 12:55:45 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:55:45 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51950
+Tue Mar  4 12:55:45 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:55:45 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:56:27 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:56:27 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:56:27 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:56:28 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51958
+Tue Mar  4 12:56:28 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:56:29 2025 - [INFO] [Socket] Client connected from 10.31.0.254:51959
+Tue Mar  4 12:56:29 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:56:29 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 12:58:50 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 12:58:50 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 12:58:50 2025 - [INFO] [Socket] Server started
+Tue Mar  4 12:58:51 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52002
+Tue Mar  4 12:58:51 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 12:58:52 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52004
+Tue Mar  4 12:58:52 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 12:58:52 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:00:07 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:00:07 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:00:07 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:00:09 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52012
+Tue Mar  4 13:00:09 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:00:09 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52013
+Tue Mar  4 13:00:09 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:00:09 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:00:21 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:00:21 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:00:21 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:00:23 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52015
+Tue Mar  4 13:00:23 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:00:23 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52016
+Tue Mar  4 13:00:23 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:00:23 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:00:52 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:00:52 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:00:52 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:02:26 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:02:26 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:02:26 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:02:29 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52031
+Tue Mar  4 13:02:29 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:02:29 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52033
+Tue Mar  4 13:02:29 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:02:29 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:12:33 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:12:33 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:12:33 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:12:35 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52121
+Tue Mar  4 13:12:35 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:12:36 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52123
+Tue Mar  4 13:12:36 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:12:36 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:14:16 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:14:16 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:14:16 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:14:18 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52143
+Tue Mar  4 13:14:19 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:14:19 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52145
+Tue Mar  4 13:14:19 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:14:19 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:44:02 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:44:02 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:44:02 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:44:08 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52417
+Tue Mar  4 13:44:08 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:44:09 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52421
+Tue Mar  4 13:44:09 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:44:09 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:44:54 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:44:54 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:44:54 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:44:56 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52426
+Tue Mar  4 13:44:56 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:44:57 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52427
+Tue Mar  4 13:44:57 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:44:57 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:50:36 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:50:36 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:50:36 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:50:40 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52497
+Tue Mar  4 13:50:40 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:50:41 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52500
+Tue Mar  4 13:50:41 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:50:41 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:50:55 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:50:55 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:50:55 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:50:56 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52504
+Tue Mar  4 13:50:57 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:50:57 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52505
+Tue Mar  4 13:50:57 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:50:57 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:52:02 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:52:02 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:52:02 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:52:04 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52514
+Tue Mar  4 13:52:04 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:52:05 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52515
+Tue Mar  4 13:52:05 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:52:05 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:52:27 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:52:27 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:52:27 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:52:29 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52519
+Tue Mar  4 13:52:30 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:52:30 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52520
+Tue Mar  4 13:52:30 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:52:30 2025 - [INFO] [Socket] Client marked as WebSocket
+Tue Mar  4 13:53:52 2025 - [INFO] [Socket] starting server on port 8080...
+Tue Mar  4 13:53:52 2025 - [INFO] [Socket] epoll created
+Tue Mar  4 13:53:52 2025 - [INFO] [Socket] Server started
+Tue Mar  4 13:53:54 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52527
+Tue Mar  4 13:53:54 2025 - [INFO] [Socket] Client disconnected
+Tue Mar  4 13:53:55 2025 - [INFO] [Socket] Client connected from 10.31.0.254:52529
+Tue Mar  4 13:53:55 2025 - [INFO] [Socket] WebSocket connection established
+Tue Mar  4 13:53:55 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 07:19:44 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 07:19:44 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 07:19:44 2025 - [INFO] [Socket] Server started
+Thu Mar  6 07:19:52 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53317
+Thu Mar  6 07:19:52 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 07:19:53 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53319
+Thu Mar  6 07:19:53 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53320
+Thu Mar  6 07:19:53 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 07:19:53 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 07:19:53 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 07:21:00 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 07:21:00 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 07:21:00 2025 - [INFO] [Socket] Server started
+Thu Mar  6 07:21:02 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53327
+Thu Mar  6 07:21:02 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 07:21:02 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53328
+Thu Mar  6 07:21:02 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 07:21:02 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 07:25:33 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 07:25:33 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 07:25:33 2025 - [INFO] [Socket] Server started
+Thu Mar  6 07:25:35 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53358
+Thu Mar  6 07:25:35 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 07:25:35 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53360
+Thu Mar  6 07:25:35 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 07:25:35 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 07:26:05 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 07:26:05 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 07:26:05 2025 - [INFO] [Socket] Server started
+Thu Mar  6 07:26:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53368
+Thu Mar  6 07:26:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 07:26:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53369
+Thu Mar  6 07:26:08 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 07:26:08 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 08:12:05 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 08:12:05 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 08:12:05 2025 - [INFO] [Socket] Server started
+Thu Mar  6 08:12:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:54700
+Thu Mar  6 08:12:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 08:12:28 2025 - [INFO] [Socket] Client connected from 10.31.1.18:54703
+Thu Mar  6 08:12:28 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 08:12:28 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:00:25 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:00:25 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:00:25 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:00:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57217
+Thu Mar  6 10:00:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57218
+Thu Mar  6 10:00:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:00:28 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57223
+Thu Mar  6 10:00:28 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:00:28 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:00:28 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:08 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:02:08 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:02:08 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57327
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57329
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57330
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:02:10 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:13 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57331
+Thu Mar  6 10:02:13 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:13 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57332
+Thu Mar  6 10:02:47 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:02:47 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:02:47 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:02:51 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57376
+Thu Mar  6 10:02:51 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57377
+Thu Mar  6 10:02:51 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:51 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:52 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57378
+Thu Mar  6 10:02:52 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:02:52 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57379
+Thu Mar  6 10:02:52 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57380
+Thu Mar  6 10:02:53 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57381
+Thu Mar  6 10:02:53 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:02:53 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:05:40 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:05:40 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:05:40 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:10:16 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:10:16 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:10:16 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:10:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58154
+Thu Mar  6 10:10:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58156
+Thu Mar  6 10:10:19 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:10:20 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58157
+Thu Mar  6 10:10:20 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:10:20 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:10:20 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:10:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58163
+Thu Mar  6 10:10:25 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:10:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58164
+Thu Mar  6 10:10:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58165
+Thu Mar  6 10:10:35 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:10:35 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:10:35 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:10:36 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58196
+Thu Mar  6 10:10:36 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:10:36 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58198
+Thu Mar  6 10:10:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58199
+Thu Mar  6 10:10:37 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:10:37 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:10:37 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:12:13 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:12:13 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:12:13 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58367
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58368
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58370
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:12:15 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:12:18 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58374
+Thu Mar  6 10:12:18 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:12:18 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58375
+Thu Mar  6 10:12:18 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58376
+Thu Mar  6 10:12:23 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:12:23 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:12:23 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:12:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58383
+Thu Mar  6 10:12:25 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:12:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58384
+Thu Mar  6 10:12:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58385
+Thu Mar  6 10:12:25 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:12:25 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:15:11 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:15:11 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:15:11 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:15:16 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58631
+Thu Mar  6 10:15:16 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:15:16 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58632
+Thu Mar  6 10:15:18 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:15:18 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58650
+Thu Mar  6 10:15:18 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58651
+Thu Mar  6 10:15:18 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:15:18 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:15:25 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:15:25 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:15:25 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58660
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58661
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58662
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:15:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:16:40 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:16:40 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:16:40 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58786
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58787
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58788
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:16:42 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:17:34 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:17:34 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:17:34 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58873
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58874
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:58875
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:17:37 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:19:06 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:19:06 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:19:06 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59016
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59017
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59018
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:19:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:24:42 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:24:42 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:24:42 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59433
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59434
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59435
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59455
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:24:43 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:24:48 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:24:48 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:24:48 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59460
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59461
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59462
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:24:50 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:24:56 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:24:56 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:24:56 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59468
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59469
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59470
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:24:58 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:25:06 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:25:06 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:25:06 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59480
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59481
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59482
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:25:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:25:28 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:25:28 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:25:28 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59505
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59506
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59507
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:25:30 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:27:53 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:27:53 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:27:53 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59687
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59688
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59689
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:27:56 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:28:00 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59692
+Thu Mar  6 10:28:00 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59693
+Thu Mar  6 10:28:00 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:28:04 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:28:04 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:28:04 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59700
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59701
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59703
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:28:06 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:28:30 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59721
+Thu Mar  6 10:28:30 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:32:51 2025 - [INFO] [Socket] Server stopped
+Thu Mar  6 10:32:54 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:32:54 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:32:54 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60078
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60081
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60082
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:32:59 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:33:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60085
+Thu Mar  6 10:33:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60086
+Thu Mar  6 10:33:03 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:33:07 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:33:07 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:33:07 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60093
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60094
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60095
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:33:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:33:42 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:33:42 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:33:42 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60177
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60178
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60179
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:34:26 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:35:46 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:35:46 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:35:46 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60279
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60280
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60281
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:35:49 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:36:38 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:36:38 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:36:38 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60340
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60341
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60342
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:36:39 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:37:05 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:37:05 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:37:05 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60368
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60369
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60370
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:37:07 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:37:42 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:37:42 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:37:42 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:37:44 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60419
+Thu Mar  6 10:37:44 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60420
+Thu Mar  6 10:37:44 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:37:45 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60421
+Thu Mar  6 10:37:45 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:37:45 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:43:30 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:43:30 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:43:30 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:43:31 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60857
+Thu Mar  6 10:43:31 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60859
+Thu Mar  6 10:43:31 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:43:32 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60861
+Thu Mar  6 10:43:32 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:43:32 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:43:35 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:43:35 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:43:35 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:43:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60863
+Thu Mar  6 10:43:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60864
+Thu Mar  6 10:43:37 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:43:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60866
+Thu Mar  6 10:43:37 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:43:37 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:43:40 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:43:40 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:43:40 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:43:41 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60870
+Thu Mar  6 10:43:41 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60871
+Thu Mar  6 10:43:41 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:43:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60872
+Thu Mar  6 10:43:42 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:43:42 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:45:09 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:45:09 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:45:09 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:45:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60984
+Thu Mar  6 10:45:11 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:45:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60985
+Thu Mar  6 10:45:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60987
+Thu Mar  6 10:45:11 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:45:11 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:46:24 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:46:24 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:46:24 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:46:26 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61083
+Thu Mar  6 10:46:26 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61084
+Thu Mar  6 10:46:26 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:46:26 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61085
+Thu Mar  6 10:46:26 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:46:26 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:46:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:46:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61086
+Thu Mar  6 10:46:30 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:46:30 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:46:30 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:46:31 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61096
+Thu Mar  6 10:46:31 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:46:31 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61097
+Thu Mar  6 10:46:31 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61098
+Thu Mar  6 10:46:31 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:46:31 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61235
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61234
+Thu Mar  6 10:48:25 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61233
+Thu Mar  6 10:48:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:48:27 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:48:27 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61237
+Thu Mar  6 10:48:28 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:48:28 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61240
+Thu Mar  6 10:48:28 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61241
+Thu Mar  6 10:48:32 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:48:32 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:50:18 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:50:18 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:50:18 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:50:21 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61388
+Thu Mar  6 10:50:21 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:50:21 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61389
+Thu Mar  6 10:50:23 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:50:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61391
+Thu Mar  6 10:50:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61392
+Thu Mar  6 10:50:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61393
+Thu Mar  6 10:50:23 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:50:23 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:51:36 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:51:36 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:51:36 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:51:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61481
+Thu Mar  6 10:51:38 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:51:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61482
+Thu Mar  6 10:51:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61483
+Thu Mar  6 10:51:38 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 10:51:38 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 10:55:33 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 10:55:33 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 10:55:33 2025 - [INFO] [Socket] Server started
+Thu Mar  6 10:55:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61762
+Thu Mar  6 10:55:38 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:55:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61763
+Thu Mar  6 10:55:40 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:55:40 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61766
+Thu Mar  6 10:55:40 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61767
+Thu Mar  6 10:55:40 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:55:41 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:55:41 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61778
+Thu Mar  6 10:56:11 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 10:56:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61811
+Thu Mar  6 10:56:11 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:23 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:15:23 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:15:23 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:15:30 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50709
+Thu Mar  6 12:15:30 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50710
+Thu Mar  6 12:15:30 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:30 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:32 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50715
+Thu Mar  6 12:15:33 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:33 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50718
+Thu Mar  6 12:15:33 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50719
+Thu Mar  6 12:15:38 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:38 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50730
+Thu Mar  6 12:15:39 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:15:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50731
+Thu Mar  6 12:15:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50732
+Thu Mar  6 12:15:40 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50733
+Thu Mar  6 12:15:40 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:15:40 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:17:01 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:17:01 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:17:01 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:17:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50818
+Thu Mar  6 12:17:03 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:17:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50819
+Thu Mar  6 12:17:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50821
+Thu Mar  6 12:17:03 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:17:03 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:17:40 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:17:40 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:17:40 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:17:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50854
+Thu Mar  6 12:17:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50855
+Thu Mar  6 12:17:42 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:17:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50856
+Thu Mar  6 12:17:42 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:17:42 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:18:00 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:18:00 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:18:00 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:18:01 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50885
+Thu Mar  6 12:18:01 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:18:01 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50886
+Thu Mar  6 12:18:05 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:18:05 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50889
+Thu Mar  6 12:18:05 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50892
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50893
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50894
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50896
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:18:07 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:18:14 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:18:14 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50899
+Thu Mar  6 12:18:18 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:18:18 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:18:18 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:18:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50905
+Thu Mar  6 12:18:19 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:18:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50906
+Thu Mar  6 12:18:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:50907
+Thu Mar  6 12:18:19 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:18:19 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:23:09 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:23:09 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:23:09 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:23:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51182
+Thu Mar  6 12:23:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51183
+Thu Mar  6 12:23:12 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:23:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51185
+Thu Mar  6 12:23:12 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:23:12 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:28:21 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:28:21 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:28:21 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:28:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51457
+Thu Mar  6 12:28:23 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:28:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51459
+Thu Mar  6 12:28:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51460
+Thu Mar  6 12:28:23 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:28:23 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:28:28 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:28:28 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:28:28 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:28:29 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51467
+Thu Mar  6 12:28:29 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:28:29 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51468
+Thu Mar  6 12:28:29 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51469
+Thu Mar  6 12:28:29 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:28:29 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:28:33 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:28:33 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:28:33 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:28:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51472
+Thu Mar  6 12:28:34 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:28:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51473
+Thu Mar  6 12:28:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51474
+Thu Mar  6 12:28:34 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:28:34 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:32:03 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:32:03 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:32:03 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:32:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51654
+Thu Mar  6 12:32:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51655
+Thu Mar  6 12:32:06 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:32:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51657
+Thu Mar  6 12:32:06 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:32:06 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:32:13 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:32:13 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:32:13 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:32:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51662
+Thu Mar  6 12:32:15 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:32:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51663
+Thu Mar  6 12:32:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51664
+Thu Mar  6 12:32:15 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:32:15 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:33:39 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:33:39 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:33:39 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:33:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51735
+Thu Mar  6 12:33:42 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:33:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51736
+Thu Mar  6 12:33:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:51737
+Thu Mar  6 12:33:42 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:33:42 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:38:15 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:38:15 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:38:15 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:38:17 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52280
+Thu Mar  6 12:38:17 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52281
+Thu Mar  6 12:38:17 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:38:17 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52283
+Thu Mar  6 12:38:17 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:38:17 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52407
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52406
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52410
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52412
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:40:19 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:48:09 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:48:09 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:48:09 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:48:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52971
+Thu Mar  6 12:48:12 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:48:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52973
+Thu Mar  6 12:48:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:52974
+Thu Mar  6 12:48:12 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:48:12 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:49:45 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:49:45 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:49:45 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:49:47 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53112
+Thu Mar  6 12:49:47 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53113
+Thu Mar  6 12:49:47 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:49:47 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53114
+Thu Mar  6 12:49:47 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:49:47 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:51:14 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:55:55 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:55:55 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:55:55 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:55:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53548
+Thu Mar  6 12:55:58 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:55:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53550
+Thu Mar  6 12:55:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53551
+Thu Mar  6 12:55:58 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:55:58 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:57:00 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:57:00 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:57:00 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:57:01 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53609
+Thu Mar  6 12:57:01 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53610
+Thu Mar  6 12:57:01 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:57:01 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53612
+Thu Mar  6 12:57:01 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:57:01 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:57:05 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:57:05 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:57:05 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:57:06 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53617
+Thu Mar  6 12:57:07 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:57:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53618
+Thu Mar  6 12:57:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53619
+Thu Mar  6 12:57:07 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:57:07 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:57:09 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:57:09 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:57:09 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:57:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53622
+Thu Mar  6 12:57:11 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:57:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53623
+Thu Mar  6 12:57:11 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53624
+Thu Mar  6 12:57:11 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:57:11 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 12:57:13 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:57:13 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53626
+Thu Mar  6 12:57:17 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 12:57:17 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 12:57:17 2025 - [INFO] [Socket] Server started
+Thu Mar  6 12:57:20 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53635
+Thu Mar  6 12:57:20 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53636
+Thu Mar  6 12:57:20 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 12:57:20 2025 - [INFO] [Socket] Client connected from 10.31.1.18:53637
+Thu Mar  6 12:57:20 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 12:57:20 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 13:03:13 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:11:56 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55113
+Thu Mar  6 13:11:56 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55114
+Thu Mar  6 13:11:56 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:11:57 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:11:57 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55120
+Thu Mar  6 13:11:57 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:11:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55122
+Thu Mar  6 13:11:59 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:11:59 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55124
+Thu Mar  6 13:11:59 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:12:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55134
+Thu Mar  6 13:12:03 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:12:03 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55135
+Thu Mar  6 13:12:04 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:12:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55141
+Thu Mar  6 13:12:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55143
+Thu Mar  6 13:12:07 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:12:07 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55144
+Thu Mar  6 13:12:07 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 13:12:07 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 13:12:09 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:19:11 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 13:19:11 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 13:19:11 2025 - [INFO] [Socket] Server started
+Thu Mar  6 13:19:13 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55748
+Thu Mar  6 13:19:13 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:19:13 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55749
+Thu Mar  6 13:19:14 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55753
+Thu Mar  6 13:19:14 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 13:19:14 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 13:19:26 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 13:19:26 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 13:19:26 2025 - [INFO] [Socket] Server started
+Thu Mar  6 13:19:28 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55773
+Thu Mar  6 13:19:28 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55774
+Thu Mar  6 13:19:28 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:19:29 2025 - [INFO] [Socket] Client connected from 10.31.1.18:55775
+Thu Mar  6 13:19:29 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 13:19:29 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 13:22:15 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 13:22:15 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 13:22:15 2025 - [INFO] [Socket] Server started
+Thu Mar  6 13:22:17 2025 - [INFO] [Socket] Client connected from 10.31.1.18:56052
+Thu Mar  6 13:22:17 2025 - [INFO] [Socket] Client connected from 10.31.1.18:56053
+Thu Mar  6 13:22:17 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:22:17 2025 - [INFO] [Socket] Client connected from 10.31.1.18:56054
+Thu Mar  6 13:22:17 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 13:22:17 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 13:22:19 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:23:06 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 13:23:06 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 13:23:06 2025 - [INFO] [Socket] Server started
+Thu Mar  6 13:23:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:56112
+Thu Mar  6 13:23:08 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 13:23:08 2025 - [INFO] [Socket] Client connected from 10.31.1.18:56113
+Thu Mar  6 13:23:09 2025 - [INFO] [Socket] Client connected from 10.31.1.18:56115
+Thu Mar  6 13:23:09 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 13:23:09 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 13:23:09 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:12:33 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:12:33 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:12:33 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:12:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59401
+Thu Mar  6 14:12:39 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59402
+Thu Mar  6 14:12:39 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:12:41 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:12:41 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59406
+Thu Mar  6 14:12:42 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59408
+Thu Mar  6 14:12:42 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:12:42 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:12:43 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:18:32 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59742
+Thu Mar  6 14:18:32 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:18:32 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59744
+Thu Mar  6 14:18:32 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59745
+Thu Mar  6 14:21:43 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:21:43 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:21:43 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:21:47 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59964
+Thu Mar  6 14:21:47 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:21:47 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59966
+Thu Mar  6 14:21:48 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59968
+Thu Mar  6 14:21:48 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:21:48 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:21:49 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:21:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59969
+Thu Mar  6 14:21:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:59970
+Thu Mar  6 14:22:38 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:22:38 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:22:38 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:22:40 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60013
+Thu Mar  6 14:22:40 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:22:40 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60014
+Thu Mar  6 14:22:40 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60015
+Thu Mar  6 14:22:40 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:22:40 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:22:44 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:22:44 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60024
+Thu Mar  6 14:24:56 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:24:56 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:24:56 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:24:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60161
+Thu Mar  6 14:24:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60162
+Thu Mar  6 14:24:58 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:24:59 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60163
+Thu Mar  6 14:24:59 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:24:59 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:24:59 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:24:59 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60165
+Thu Mar  6 14:26:21 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:26:21 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:26:21 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:26:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60261
+Thu Mar  6 14:26:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60262
+Thu Mar  6 14:26:23 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:26:23 2025 - [INFO] [Socket] Client connected from 10.31.1.18:60264
+Thu Mar  6 14:26:23 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:26:23 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:26:44 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:39:12 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:39:12 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:39:12 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:39:45 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61079
+Thu Mar  6 14:39:45 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61080
+Thu Mar  6 14:39:45 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:39:45 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61081
+Thu Mar  6 14:39:45 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:39:45 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:39:50 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:39:50 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61086
+Thu Mar  6 14:39:50 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61087
+Thu Mar  6 14:39:55 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:39:55 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:39:55 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:39:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61102
+Thu Mar  6 14:39:58 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:39:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61103
+Thu Mar  6 14:39:58 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61104
+Thu Mar  6 14:39:58 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:39:58 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:41:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61220
+Thu Mar  6 14:41:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61221
+Thu Mar  6 14:41:49 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:41:49 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61223
+Thu Mar  6 14:41:49 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:41:49 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:43:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61317
+Thu Mar  6 14:43:34 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:43:34 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:44:10 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:44:10 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:44:10 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:44:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61379
+Thu Mar  6 14:44:12 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:44:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61380
+Thu Mar  6 14:44:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61382
+Thu Mar  6 14:44:12 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:44:12 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:44:15 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:44:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61384
+Thu Mar  6 14:44:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61385
+Thu Mar  6 14:44:36 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:44:36 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:44:36 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:44:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61407
+Thu Mar  6 14:44:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61408
+Thu Mar  6 14:44:37 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:44:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61409
+Thu Mar  6 14:44:38 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:44:38 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:44:45 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:44:45 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61422
+Thu Mar  6 14:44:45 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61423
+Thu Mar  6 14:46:32 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:46:32 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:46:32 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:46:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61523
+Thu Mar  6 14:46:34 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:46:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61524
+Thu Mar  6 14:46:34 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61525
+Thu Mar  6 14:46:34 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:46:34 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:46:35 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:46:35 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61526
+Thu Mar  6 14:47:02 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:47:02 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:47:02 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61552
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61553
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61554
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:47:04 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61555
+Thu Mar  6 14:47:51 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:47:51 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:47:51 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:47:54 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61623
+Thu Mar  6 14:47:54 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61624
+Thu Mar  6 14:47:54 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:47:54 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61625
+Thu Mar  6 14:47:54 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:47:54 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:47:55 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61626
+Thu Mar  6 14:47:55 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:48:13 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:48:13 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:48:13 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:48:14 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61647
+Thu Mar  6 14:48:14 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:48:14 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61648
+Thu Mar  6 14:48:14 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61650
+Thu Mar  6 14:48:14 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:48:14 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:48:15 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:48:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61651
+Thu Mar  6 14:49:07 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:49:07 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:49:07 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:49:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61877
+Thu Mar  6 14:49:12 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61878
+Thu Mar  6 14:49:17 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:49:18 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61888
+Thu Mar  6 14:49:18 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:49:18 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:49:19 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61890
+Thu Mar  6 14:49:19 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:49:36 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:49:36 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:49:36 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:49:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61912
+Thu Mar  6 14:49:37 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:49:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61913
+Thu Mar  6 14:49:37 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61915
+Thu Mar  6 14:49:37 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:49:37 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:49:38 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:49:38 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61917
+Thu Mar  6 14:50:54 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 14:50:54 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 14:50:54 2025 - [INFO] [Socket] Server started
+Thu Mar  6 14:50:55 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61993
+Thu Mar  6 14:50:55 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61994
+Thu Mar  6 14:50:55 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:50:55 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61998
+Thu Mar  6 14:50:55 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 14:50:55 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 14:50:57 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 14:50:57 2025 - [INFO] [Socket] Client connected from 10.31.1.18:61999
+Thu Mar  6 15:09:13 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 15:09:13 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 15:09:13 2025 - [INFO] [Socket] Server started
+Thu Mar  6 15:09:15 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57790
+Thu Mar  6 15:09:15 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 15:09:16 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57793
+Thu Mar  6 15:09:16 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 15:09:16 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 15:09:16 2025 - [INFO] [Socket] Client connected from 10.31.1.18:57789
+Thu Mar  6 15:09:40 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 15:11:37 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 15:11:37 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 15:11:37 2025 - [ERROR] [Socket] bind: Address already in use
+Thu Mar  6 15:11:53 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 15:11:53 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 15:11:53 2025 - [ERROR] [Socket] bind: Address already in use
+Thu Mar  6 15:14:41 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 15:14:41 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 15:14:41 2025 - [INFO] [Socket] Server started
+Thu Mar  6 15:14:43 2025 - [INFO] [Socket] Client connected from 10.31.1.18:54384
+Thu Mar  6 15:14:43 2025 - [INFO] [Socket] Client connected from 10.31.1.18:54385
+Thu Mar  6 15:14:43 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 15:14:44 2025 - [INFO] [Socket] Client connected from 10.31.1.18:54388
+Thu Mar  6 15:14:44 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 15:14:44 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 15:16:34 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 15:16:34 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 15:16:34 2025 - [ERROR] [Socket] bind: Address already in use
+Thu Mar  6 15:19:03 2025 - [INFO] [Socket] starting server on port 8080...
+Thu Mar  6 15:19:03 2025 - [INFO] [Socket] epoll created
+Thu Mar  6 15:19:03 2025 - [INFO] [Socket] Server started
+Thu Mar  6 15:19:05 2025 - [INFO] [Socket] Client connected from 10.31.5.50:56588
+Thu Mar  6 15:19:05 2025 - [INFO] [Socket] Client disconnected
+Thu Mar  6 15:19:05 2025 - [INFO] [Socket] Client connected from 10.31.5.50:56589
+Thu Mar  6 15:19:06 2025 - [INFO] [Socket] Client connected from 10.31.5.50:56596
+Thu Mar  6 15:19:06 2025 - [INFO] [Socket] WebSocket connection established
+Thu Mar  6 15:19:06 2025 - [INFO] [Socket] Client marked as WebSocket
+Thu Mar  6 15:20:06 2025 - [INFO] [Socket] Client disconnected
