@@ -1,16 +1,7 @@
 package webSocket_utils;
 
-use strict;
-use warnings;
-use MIME::Base64;
-use Digest::SHA;
-use MIME::Base64;
-use Data::Dumper;
-use JSON;
-use Try::Tiny;
-
-
-
+# use lib qw(packages);  
+use includes;
 
 
 sub new {
@@ -27,14 +18,14 @@ sub handle_websocket_handshake {
     if (!$client_request) {
         die "handle_websocket_handshake requires a client request";
     }
-    print "client requestttttt: $client_request\n";
+    # print "client requestttttt: $client_request\n";
     my $key;
     if ($client_request =~ /Sec-WebSocket-Key: (.*?)\r/) {
         $key = $1;
     }
     my $accept_key = $key . "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
     # $accept_key = Digest::SHA::sha1_base64($accept_key) . "=";
-    $accept_key = encode_base64(Digest::SHA::sha1($accept_key), '');
+    $accept_key = includes::encode_base64(Digest::SHA::sha1($accept_key), '');
 
     my $response = "HTTP/1.1 101 Switching Protocols\r\n";
     $response .= "Upgrade: websocket\r\n";
@@ -205,7 +196,7 @@ sub hex_to_ascii {
 }
 
 sub handle_websocket_message {
-    my ($self, $fd, $frame, $epoll_ref, $chat_epoll_ref, $uri, $sth_conversation, $sth_user, $sth_message, $dbh) = @_;
+    my ($self, $fd, $frame, $epoll_ref, $chat_epoll_ref, $uri, $dbh) = @_;
 
     my $client = $epoll_ref->{$fd};
     if (!$client) {
@@ -218,11 +209,8 @@ sub handle_websocket_message {
         print "Failed to decode websocket frame\n";
         return;
     }
-    my $byte_received = pack("H", $frame);
-    open my $fh, '>', "test";
-    print $fh $frame;
-    close $fh;
-    print "REseived: $received\n";
+    
+    # print "REseived: $received\n";
     if (!$received) {
         print "Failed to decode websocket frame\n";
         return;
@@ -237,9 +225,11 @@ sub handle_websocket_message {
         }
     }
 
+    # print "Received message: " . includes::Dumper($message) . "\n";
+
     
     if ($message->{action} ne "ping") {
-        print "Received message: " . Dumper($message) . "\n";
+        print "Received message: " . includes::Dumper($message) . "\n";
     }
 
     # Send a pong back to a ping message
@@ -247,11 +237,12 @@ sub handle_websocket_message {
         my $res = {
             action => "pong"
         };
-        my $response_frame = $self->encode_websocket_frame( 0x1, encode_json($res) );
+        my $response_frame = $self->encode_websocket_frame( 0x1, includes::encode_json($res) );
         send( $client->{socket}, $response_frame, 0 );
     }
 
-    if ($uri eq "/ws") {
+    # if ($uri eq "/ws") {
+        # print("MESSAGE ACTION: " . $message->{action} . "\n");
 
         if ( $message->{action} eq 'get_users') {
             # get all users from the users table in the database
@@ -259,12 +250,13 @@ sub handle_websocket_message {
             $sth->execute();
             my $users = $sth->fetchall_arrayref({});
             $sth->finish();
-            print "Users: " . Dumper($users);
+            print "Users: " . includes::Dumper($users);
         
             my $res = {
                 action => "users_list",
                 users => $users
             };
+
 
             my $response_frame = $self->encode_websocket_frame(0x1, JSON::to_json($res));
             send($client->{socket}, $response_frame, 0);
@@ -296,6 +288,7 @@ sub handle_websocket_message {
             
 
         } elsif ($message->{action} eq 'get_chat_id') {
+            print "user asks for chat id\n";
 
             # get the receiver_id from json message
             my $receiver_id = $message->{receiver_id}; 
@@ -307,17 +300,17 @@ sub handle_websocket_message {
 
             die "Error: Sender ID not found" unless defined $sender_id;
 
-            print Dumper($message);   
-            my $sth = $dbh->prepare('   SELECT c.chat_id
-                                        FROM chats c
-                                        JOIN chat_participants cp1 ON c.chat_id = cp1.chat_id
-                                        JOIN chat_participants cp2 ON c.chat_id = cp2.chat_id
-                                        WHERE c.is_group = false
-                                        AND cp1.user_id = ?
-                                        AND cp2.user_id = ?;
-                                    ');
+            print includes::Dumper($message);   
+            $sth = $dbh->prepare('  SELECT c.chat_id
+                                    FROM chats c
+                                    JOIN chat_participants cp1 ON c.chat_id = cp1.chat_id
+                                    JOIN chat_participants cp2 ON c.chat_id = cp2.chat_id
+                                    WHERE c.is_group = false
+                                    AND cp1.user_id = ?
+                                    AND cp2.user_id = ?;
+                                ');
             $sth->execute($sender_id, $receiver_id) or die "Select failed: $dbh->errstr()";
-            my $row = $sth->fetchrow_hashref();
+            $row = $sth->fetchrow_hashref();
             $sth->finish();
             my $chat_id = $row ? $row->{chat_id} : undef;
 
@@ -356,8 +349,50 @@ sub handle_websocket_message {
 
             my $response_frame = $self->encode_websocket_frame(0x1, JSON::to_json($res));
             send($client->{socket}, $response_frame, 0);
+        } elsif ($message->{action} eq 'get_messages') {
+
+            my $chat_id = $message->{chat_id};
+            my $sth = $dbh->prepare('
+                                        SELECT senderid, content
+                                        FROM messages
+                                        WHERE chat_id = ?
+                                    ');
+            $sth->execute($chat_id) or die "Select failed: $dbh->errstr()";
+            my $messages = $sth->fetchall_arrayref({});
+            $sth->finish();
+            # print "Messages: " . Dumper($messages) . "\n";
+            
+            my $user_messages = [];
+            foreach my $message (@$messages) {
+                print "Sender ID: " . $message->{senderid} . "\n";
+                $sth = $dbh->prepare('
+                                        SELECT username
+                                        FROM users
+                                        WHERE user_id = ?
+                                    ');
+                $sth->execute($message->{senderid}) or die "Select failed: $dbh->errstr()";
+                my $sender_username = $sth->fetchrow_hashref();
+                $sth->finish();
+
+                push @$user_messages, {
+                    sender_username => $sender_username->{username},
+                    content => $message->{content}
+                };
+                
+            }
+
+            # print "User messages: " . Dumper($user_messages) . "\n";
+           
+
+            my $res = {
+                action => "messages",
+                messages => $user_messages
+            };
+
+            my $response_frame = $self->encode_websocket_frame(0x1, JSON::to_json($res));
+            send($client->{socket}, $response_frame, 0);
         }
-    }
+    # }
 }
 
 

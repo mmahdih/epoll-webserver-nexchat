@@ -165,6 +165,7 @@ HTML
 #         </div>
 #         <div id="chat-box" class="flex flex-col space-y-2 overflow-y-auto h-64 p-2 border rounded-lg bg-gray-50"></div>
 #         <div class="flex mt-4 space-x-2">
+            
 #             <input id="message" type="text" placeholder="Type a message..." class="flex-1 p-2 border rounded-lg">
 #             <button id="send" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Send</button>
 #         </div>
@@ -204,10 +205,18 @@ HTML
 
       <!-- Chat Messages -->
       <div class="w-2/3 flex flex-col p-4">
+        <h2 class="text-xl font-semibold mb-4">Chat with</h2>
+        <h3 id="chatWith" class="text-2xl font-semibold mb-4"></h3>
         <div class="messages-container flex-1 overflow-y-auto space-y-2"></div>
         
         <!-- Message Input -->
-        <div class="mt-4 flex">
+        <div class="mt-4 flex items-center space-x-2">
+        <input type="file" id="add-file" class="hidden" />
+        <label for="add-file" class="ml-2 bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+        </label>
           <input id="messageInput" type="text" class="flex-1 p-2 border border-gray-300 rounded-lg focus:outline-none" placeholder="Type a message..." />
           <button id="sendMessage" class="ml-2 bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600">Send</button>
         </div>
@@ -224,7 +233,7 @@ HTML
     let chat_id;
 
     // Connect to WebSocket server
-    const ws = new WebSocket("ws://10.31.1.1:8080/ws");
+    const ws = new WebSocket("ws://" + window.location.host + "/ws");
 
     ws.onopen = () => {
         console.log("Connected to server");
@@ -238,9 +247,14 @@ HTML
     ws.onmessage = (event) => {
         try {
             let received_data = JSON.parse(event.data);
+
             
             if (received_data.action === "users_list") {
                 users = received_data.users;
+                
+                    // ws.send(JSON.stringify({ action: "get_users" }));
+                    console.log("Users list is:" + users);
+                
                 console.log("test");
                 renderFriendsList();
             } else if (received_data.action === "new_message") {
@@ -252,8 +266,20 @@ HTML
             } else if (received_data.action === "chat_id") {
                 chat_id = received_data.chat_id;
                 console.log("Chat ID:", chat_id);
-            } else if (received_data.action === "new_message") {
-                displayMessage(received_data.message, "friend");
+            } else if (received_data.action === "messages") {
+                console.log("Received messages:", received_data.messages);
+                let usernameCookie = document.cookie.split("; ").find(row => row.startsWith("username="));
+                let sender_username = usernameCookie ? usernameCookie.split("=")[1] : null;
+                if (!sender_username) {
+                    console.error("Username not found in cookies.");
+                }
+                received_data.messages.forEach(message => {
+                    if (message.sender_username === sender_username) {
+                        displayMessage(message.content, "own");
+                    } else {
+                        displayMessage(message.content, "friend");
+                    }
+                });
             }
         } catch (error) {
             console.error("Error parsing WebSocket message:", error);
@@ -264,11 +290,13 @@ HTML
     function renderFriendsList() {
         friendsList.innerHTML = ""; // Clear existing friends list
         users.forEach(user => {
+            
             const friend = document.createElement('li');
             friend.classList.add('friend', 'p-3', 'bg-gray-300', 'rounded-lg', 'mb-2', 'cursor-pointer', 'hover:bg-white');
             friend.textContent = user.display_name;
             friend.setAttribute('data-name', user.display_name);
             friendsList.appendChild(friend);
+            
         });
     }
 
@@ -278,12 +306,24 @@ HTML
     friendsList.addEventListener("click", (event) => {
         // ask server to create a chat and send the chat id
         // get the user id from cookies
-        let sender_username = document.cookie.split("; ").find(row => row.startsWith("username=")).split("=")[1];
+        let usernameCookie = document.cookie.split("; ").find(row => row.startsWith("username="));
+        let sender_username = usernameCookie ? usernameCookie.split("=")[1] : null;
+        if (!sender_username) {
+            console.error("Username not found in cookies.");
+        }
+
+        let chat_with = document.getElementById('chatWith');
+        chat_with.textContent = event.target.getAttribute("data-name");
+
+        
+
+
         const messageData = {
             action: "get_chat_id",
             receiver_id: users.find(user => user.display_name === event.target.getAttribute("data-name")).user_id,
             sender_username: sender_username
         }
+        console.log(messageData);
         ws.send(JSON.stringify(messageData));
 
         if (typeof chat_id !== 'undefined') {
@@ -293,13 +333,39 @@ HTML
 
             const friendName = event.target.getAttribute("data-name");
             console.log("Selected friend:", friendName);
+            console.log("Chat ID:", chat_id);
 
             messagesContainer.innerHTML = ""; // Clear messages when switching chat
+
+           
+
+
+            const messageData = {
+                action: "get_messages",
+                chat_id: chat_id
+            }
+            ws.send(JSON.stringify(messageData));
+
+            // messages.forEach((message) => {
+            //     displayMessage(message.text, message.type);
+            // });
+
+
+        } else if (!event.target.closest(".friend")) {
+            console.log("Clicked element is not a friend.");
+            return;
         }
         } else {
             console.log("No chat selected.");
         }
     });
+
+    messageInput.addEventListener("keypress", (event) => {
+        if (event.key === "Enter") {
+            sendMessageButton.click();
+        }
+    });
+
 
     // Send message
     sendMessageButton.addEventListener("click", () => {
@@ -309,12 +375,19 @@ HTML
 
         let sender_username = document.cookie.split("; ").find(row => row.startsWith("username=")).split("=")[1];
 
+        if (!chat_id) {
+            console.error("No chat ID available. Cannot send message.");
+            return;
+        }
+
+
         const messageData = {
             action: "send_message",
             chat_id: chat_id, // Replace with actual selected friend
             message: messageText,
             sender_username: sender_username
         };
+        console.log("Message data:", messageData);
         ws.send(JSON.stringify(messageData));
         displayMessage(messageText, "own");
         messageInput.value = "";
@@ -334,6 +407,10 @@ HTML
         messageElement.textContent = text;
         messagesContainer.appendChild(messageElement);
         messagesContainer.scrollTop = messagesContainer.scrollHeight; // Auto-scroll
+
+
+
+        
     }
 </script>
 
