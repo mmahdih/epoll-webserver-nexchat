@@ -1,4 +1,4 @@
-package database_utils;
+package DatabaseUtils;
 
 use strict;
 use warnings;

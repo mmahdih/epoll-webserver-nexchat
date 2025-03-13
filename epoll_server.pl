@@ -1,16 +1,21 @@
-use lib qw(packages);  
-use includes;
-use Socket;
-use IO::Epoll;
 
+use strict;
+use warnings;
+use IO::Epoll;
+use Socket;
+use JSON;
+
+# Including libraries
+use lib '.';  
+use includes;
 
 my $port = 8080;
 
 
 ## Connect to PostgreSQL database
 my $dbh;
-database_utils::connect_to_database();
-$dbh = $database_utils::dbh;
+DatabaseUtils::connect_to_database();
+$dbh = $DatabaseUtils::dbh;
 if (!$dbh) {
     print "Failed to connect to database\n";
     exit;
@@ -24,13 +29,13 @@ my %chat_epoll;
 my $smtp_server = smtp_server->new();
 
 # User control object
-my $user_control = user_control->new();
+my $UserControl = UserControl->new();
 
 # WebSocket server object
-my $websocket_server = webSocket_utils->new();
+my $websocket_server = WebSocketUtils->new();
 
 # HTTP server object
-my $http_request = HTTP_Request->new();
+my $HttpRequest = HttpRequest->new();
 
 
 my $hehe;
@@ -54,29 +59,21 @@ includes::GetOptions(
 
 
 
-sub help {
-    print "Usage: perl epoll_server.pl [options]\n";
-    print "Options:\n";
-    print "  --start     Start the server\n";
-    print "  --port      Specify the port number\n";
-    print "  --smtp      Start the SMTP server\n";
-}
-
 
 # Routes
 my %get_routes = (
-    '/'          => \&home_page,
-    '/profile'   => \&profile_page,
-    '/settings'  => \&settings_page,
-    '/dashboard' => \&dashboard_page,  # New GET route
-    '/help'      => \&help_page,       # New GET route
+    '/'                 => \&home_page,
+    '/chat'             => \&profile_page,
+    '/favicon'          => \&settings_page,
+    '/settings'         => \&dashboard_page,  # New GET route
+    '/settings/profile' => \&help_page,       # New GET route
 );
 
 my %post_routes = (
-    '/login'    => \&login_handler,
-    '/register' => \&register_handler,
-    '/update'   => \&update_handler,
-    '/delete'   => \&delete_handler,   # New POST route
+    '/api/auth/login'       => \&login_handler,
+    '/api/auth/register'    => \&register_handler,
+    '/api/auth/logout'      => \&update_handler,
+    '/delete'               => \&delete_handler,   # New POST route
 );
 
 my %websocket_routes = (
@@ -97,23 +94,23 @@ sub start_server {
 
     # Create a TCP server socket
     socket( my $server, AF_INET, SOCK_STREAM, 0 ) 
-        or die "socket: $!" && menu_utils::write_log("ERROR", "Socket", "socket: $!");
+        or die "socket: $!" && MenuUtils::write_log("ERROR", "Socket", "socket: $!");
 
     setsockopt( $server, SOL_SOCKET, SO_REUSEADDR, 1 ) 
-        or die "setsockopt: $!" && menu_utils::write_log("ERROR", "Socket", "setsockopt: $!");
+        or die "setsockopt: $!" && MenuUtils::write_log("ERROR", "Socket", "setsockopt: $!");
 
     bind( $server, sockaddr_in( $port, INADDR_ANY ) ) 
-        or die "bind: $!" && menu_utils::write_log("ERROR", "Socket", "bind: $!");
+        or die "bind: $!" && MenuUtils::write_log("ERROR", "Socket", "bind: $!");
 
     listen( $server, 5 ) 
-        or die "listen: $!" && menu_utils::write_log("ERROR", "Socket", "listen: $!");
+        or die "listen: $!" && MenuUtils::write_log("ERROR", "Socket", "listen: $!");
 
 
     # connect to database
-    database_utils::connect_to_database();
+    DatabaseUtils::connect_to_database();
     
     # Create table if not exists
-    database_utils::create_tables();
+    DatabaseUtils::create_tables();
     
     # Prepare insert statement
     my $sth_user = $dbh->prepare(q{INSERT INTO users (username, password, email, display_name, is_admin) VALUES (?, ?, ?, ?, ?) RETURNING user_id})
@@ -125,10 +122,10 @@ sub start_server {
 
     # Add the server socket to epoll
     epoll_ctl( $epoll{server_epoll}, EPOLL_CTL_ADD, fileno($server), EPOLLIN ) >= 0
-      or die "Failed to add server socket to epoll: $!\n" && menu_utils::write_log("ERROR", "Socket", "Failed to add server socket to epoll: $!\n");
+      or die "Failed to add server socket to epoll: $!\n" && MenuUtils::write_log("ERROR", "Socket", "Failed to add server socket to epoll: $!\n");
 
     print "WebSocket server started on port $port...\n";
-    menu_utils::write_log("INFO", "Socket", "Server started");
+    MenuUtils::write_log("INFO", "Socket", "Server started");
 
     # Main loop to handle events
     while (1) {
@@ -141,7 +138,7 @@ sub start_server {
                 my $client_ip_str = inet_ntoa($client_ip);
                 print "Client connected from $client_ip_str:$client_port\n";
 
-                menu_utils::write_log("INFO", "Socket", "Client connected from $client_ip_str:$client_port");
+                MenuUtils::write_log("INFO", "Socket", "Client connected from $client_ip_str:$client_port");
 
                 epoll_ctl( $epoll{server_epoll}, EPOLL_CTL_ADD, fileno $client_socket, EPOLLIN ) >= 0
                   or die "Failed to add client socket to epoll: $!\n";
@@ -186,11 +183,11 @@ sub handle_client {
     if ($client->{is_websocket}) {
         $websocket_server->handle_websocket_message($fd, $buffer, \%epoll, \%chat_epoll, $hehe, $dbh);
     } else {
-        handle_http_request($fd, $buffer);
+        handle_HttpRequest($fd, $buffer);
     }
 }
 
-sub handle_http_request {
+sub handle_HttpRequest {
     my ($fd, $buffer) = @_;
     my $client = $epoll{$fd};
 
@@ -198,7 +195,7 @@ sub handle_http_request {
     $hehe = $req->uri;
     if (!$req) {
         print "Invalid HTTP req\n";
-        menu_utils::write_log("ERROR", "Socket", "Invalid HTTP request");
+        MenuUtils::write_log("ERROR", "Socket", "Invalid HTTP request");
         return;
     }
     # print "test\n";
@@ -223,47 +220,47 @@ sub handle_http_request {
         if ($uri eq "/chat") {
             # check the cookies
             my $cookie = $req->header('Cookie') ;
-            my $username = menu_utils::get_cookie_value($cookie, "username");
+            my $username = MenuUtils::get_cookie_value($cookie, "username");
             print "Cookie: $cookie, username: $username\n";
             if ($cookie =~ /username=(.*)/) {
-                my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("chat" , $1));
+                my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("chat" , $1));
                 send( $client->{socket}, $response, 0 );
             } else {
-                my $response = HTTP_RESPONSE::REDIRECT_303(undef, "/login");
+                my $response = HttpResponse::REDIRECT_303(undef, "/login");
                 send( $client->{socket}, $response, 0 );
             }
             disconnect_client($fd , "this is the chat page");
         } elsif ($uri eq "/") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("home"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("home"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "this is the menu page");
         
         } elsif ($uri eq "/profile") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("profile"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("profile"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "this is the profile page");
 
         } elsif ($uri eq "/login") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("login"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("login"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "this is the login page");
 
         } elsif ($uri eq "/register") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("register"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("register"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "this is the register page");
 
         } elsif ($uri eq "/error") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("error"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("error"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "this is the error page");
         } elsif ($uri eq "/favicon.ico") {
-            my $icon_data = html_pages::get_favicon();
-            my $response = HTTP_RESPONSE::GET_OK_200_favicon($icon_data);
+            my $icon_data = HtmlPages::get_favicon();
+            my $response = HttpResponse::GET_OK_200_favicon($icon_data);
             send( $client->{socket}, $response, 0 );
             # disconnect_client($fd, "favicon.ico");
         } else {
-            my $response = HTTP_RESPONSE::NOT_FOUND_404(html_pages::get_html_page("404"));
+            my $response = HttpResponse::NOT_FOUND_404(HtmlPages::get_html_page("404"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "this is the 404 page");
         }
@@ -272,7 +269,7 @@ sub handle_http_request {
             my ($name) = $req->content =~ m/display_name=([^&]+)/;
             if (!$name) {
                 print "Invalid name\n";
-                menu_utils::write_log("ERROR", "Socket", "Invalid name");
+                MenuUtils::write_log("ERROR", "Socket", "Invalid name");
                 return;
             }
 
@@ -303,7 +300,7 @@ sub handle_http_request {
             $client->{name} = $name;
 
 
-            my $response = HTTP_RESPONSE::REDIRECT_303_with_cookie(undef, "/chat", "name=$name");
+            my $response = HttpResponse::REDIRECT_303_with_cookie(undef, "/chat", "name=$name");
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "Profile updated successfully");
 
@@ -362,23 +359,23 @@ sub handle_http_request {
             print "\n";
 
             if ($authenticate) {
-                my $response = HTTP_RESPONSE::REDIRECT_303_with_cookie(undef, "/", "username=$username");
+                my $response = HttpResponse::REDIRECT_303_with_cookie(undef, "/", "username=$username");
                 send( $client->{socket}, $response, 0 );
                 disconnect_client($fd , "Logged in");
             } else {
-                my $response = HTTP_RESPONSE::REDIRECT_303(undef, "/error");
+                my $response = HttpResponse::REDIRECT_303(undef, "/error");
                 send( $client->{socket}, $response, 0 );
                 disconnect_client($fd , "Invalid credentials");
             }
         } elsif ($uri eq '/api/auth/logout') {
             my $logout_cookies = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-            my $response = HTTP_RESPONSE::REDIRECT_303_with_cookie(undef, "/", $logout_cookies);
+            my $response = HttpResponse::REDIRECT_303_with_cookie(undef, "/", $logout_cookies);
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "Logged out");
         } elsif ($uri eq '/api/auth/register') {
-            # my $login = $user_control->login_check($req->cookie);
+            # my $login = $UserControl->login_check($req->cookie);
             # if ($login) {
-            #     my $response = HTTP_RESPONSE::REDIRECT_303(undef, "/");
+            #     my $response = HttpResponse::REDIRECT_303(undef, "/");
             #     send( $client->{socket}, $response, 0 );
             #     disconnect_client($fd , "Already logged in");
             #     return;
@@ -387,7 +384,7 @@ sub handle_http_request {
             my ($display_name) = $req->content =~ m/display_name=([^&]+)/;
             if (!$display_name) {
                 print "Invalid display name\n";
-                # menu_utils::write_log("ERROR", "Socket", "Invalid name");
+                # MenuUtils::write_log("ERROR", "Socket", "Invalid name");
                 return;
             }
             $display_name = includes::uri_unescape($display_name);
@@ -428,7 +425,7 @@ sub handle_http_request {
 
             $client->{username} = $username;
 
-            my $response = HTTP_RESPONSE::REDIRECT_303_with_cookie(undef, "/", "username=$username");
+            my $response = HttpResponse::REDIRECT_303_with_cookie(undef, "/", "username=$username");
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd , "Profile updated successfully");
 
@@ -448,3 +445,13 @@ sub disconnect_client {
     close( $client->{socket} );
     delete $epoll{$fd};
 }
+
+
+sub help {
+    print "Usage: perl epoll_server.pl [options]\n";
+    print "Options:\n";
+    print "  --start     Start the server\n";
+    print "  --port      Specify the port number\n";
+    print "  --smtp      Start the SMTP server\n";
+}
+

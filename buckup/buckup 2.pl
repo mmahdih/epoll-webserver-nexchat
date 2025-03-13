@@ -13,10 +13,10 @@ use Term::ReadKey;
 use lib qw(../);
 use lib '.';
 use handle_requests;
-use html_pages;
-use HTTP_RESPONSE;
-use webSocket_utils;
-use menu_utils;
+use HtmlPages;
+use HttpResponse;
+use WebSocketUtils;
+use MenuUtils;
 
 open my $log, '>>', 'server.log' or die "Cannot open log file: $!";
 select( ( select($log), $| = 1 )[0] );
@@ -196,7 +196,7 @@ sub start_server {
                         print "Websocket connection detected, establishing the connection now...\n";
                         print $log "2025-02-18 12:30:45 [INFO] [WebSocket] Websocket connection detected, establishing the connection now...\n";
 
-                        my $response = webSocket_utils::handle_websocket_handshake($client_request);
+                        my $response = WebSocketUtils::handle_websocket_handshake($client_request);
                         send( $epoll{ $event->[0] }{"socket"}, $response, 0 );
                         print "Websocket connection established.\n";
                         print $log "2025-02-18 12:30:45 [INFO] [WebSocket] Websocket connection established.\n";
@@ -217,19 +217,19 @@ sub start_server {
                             my $bytes = sysread( $epoll{ $event->[0] }{"socket"}, $frame, 1024 );
                             last unless $bytes;    # Exit if client disconnects
 
-                            my $message = webSocket_utils::decode_websocket_frame($frame);
+                            my $message = WebSocketUtils::decode_websocket_frame($frame);
 
                             # sending pong back to the client
                             if ( $message eq "ping" ) {
                                 my $response_frame =
-                                webSocket_utils::encode_websocket_frame( 0x1, "pong" );
+                                WebSocketUtils::encode_websocket_frame( 0x1, "pong" );
                                 send( $epoll{ $event->[0] }{"socket"}, $response_frame, 0 );
                             }
 
                             print "Received message: $message\n";
                             print $log "2025-02-18 12:30:45 [INFO] [WebSocket] Received message: $message\n";
 
-                            my $response_frame = webSocket_utils::encode_websocket_frame( 0x1, $message );
+                            my $response_frame = WebSocketUtils::encode_websocket_frame( 0x1, $message );
                             send( $epoll{ $event->[0] }{"socket"}, $response_frame, 0 )
                             unless $message eq "ping";
                             }
@@ -267,8 +267,8 @@ sub start_server {
             if ( $uri eq '/' ) {
 
                 my $response =
-                  HTTP_RESPONSE::GET_OK_200(
-                    html_pages::get_html_page("index") );
+                  HttpResponse::GET_OK_200(
+                    HtmlPages::get_html_page("index") );
                 send( $epoll{ $event->[0] }{"socket"}, $response, 0 );
                 epoll_ctl( $epoll_Server, EPOLL_CTL_DEL, $event->[0], EPOLLIN ) >= 0
                   or die "Failed to remove client socket from epoll: $!\n";
@@ -280,8 +280,8 @@ sub start_server {
             elsif ( $uri eq "/chat" ) {
 
                 my $response =
-                  HTTP_RESPONSE::GET_OK_200(
-                    html_pages::get_html_page("chat") );
+                  HttpResponse::GET_OK_200(
+                    HtmlPages::get_html_page("chat") );
                 send( $epoll{ $event->[0] }{"socket"}, $response, 0 );
                 epoll_ctl( $epoll_Server, EPOLL_CTL_DEL, $event->[0], EPOLLIN ) >= 0
                   or die "Failed to remove client socket from epoll: $!\n";

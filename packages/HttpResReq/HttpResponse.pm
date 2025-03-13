@@ -1,4 +1,4 @@
-package HTTP_RESPONSE;
+package HttpResponse;
 
 use strict;
 use warnings;

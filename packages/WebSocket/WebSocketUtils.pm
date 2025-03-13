@@ -1,8 +1,4 @@
-package webSocket_utils;
-
-# use lib qw(packages);  
-use includes;
-use DBI;
+package WebSocketUtils;
 
 
 sub new {

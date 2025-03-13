@@ -13,10 +13,10 @@ use URI::Escape;
 use lib qw(../);
 use lib '.';
 use handle_requests;
-use html_pages;
-use HTTP_RESPONSE;
-use webSocket_utils;
-use menu_utils;
+use HtmlPages;
+use HttpResponse;
+use WebSocketUtils;
+use MenuUtils;
 
 open my $log, '>>', 'server.log' or die "Cannot open log file: $!";
 select( ( select($log), $| = 1 )[0] );
@@ -147,11 +147,11 @@ sub handle_client {
     if ($client->{is_websocket}) {
         handle_websocket_message($fd, $buffer);
     } else {
-        handle_http_request($fd, $buffer);
+        handle_HttpRequest($fd, $buffer);
     }
 }
 
-sub handle_http_request {
+sub handle_HttpRequest {
     my ($fd, $buffer) = @_;
     my $client = $epoll{$fd};
 
@@ -167,7 +167,7 @@ sub handle_http_request {
 
     # Handle WebSocket Upgrade
     if ( defined $req->header('Sec-WebSocket-Key') ) {
-        my $response = webSocket_utils::handle_websocket_handshake($buffer);
+        my $response = WebSocketUtils::handle_websocket_handshake($buffer);
         send( $client->{socket}, $response, 0 );
         $client->{is_websocket} = 1;
         write_log("INFO", "Socket", "WebSocket connection established");
@@ -184,43 +184,43 @@ sub handle_http_request {
     # Handle normal HTTP requests
     if ($method eq 'GET') {
         if ($uri eq '/test') {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("index"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("index"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         } elsif ($uri eq "/chat") {
             # check the cookies
             my $cookie = $req->header('Cookie') ;
-            my $name = menu_utils::get_cookie_value($cookie, "name");
+            my $name = MenuUtils::get_cookie_value($cookie, "name");
             if ($cookie =~ /name=(.*)/) {
-                my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("chat" , $1));
+                my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("chat" , $1));
                 send( $client->{socket}, $response, 0 );
             } else {
-                my $response = HTTP_RESPONSE::REDIRECT_303(undef, "/profile");
+                my $response = HttpResponse::REDIRECT_303(undef, "/profile");
                 send( $client->{socket}, $response, 0 );
             }
             disconnect_client($fd);
         } elsif ($uri eq "/") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("menu"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("menu"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         
         } elsif ($uri eq "/profile") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("profile"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("profile"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
 
         } elsif ($uri eq "/error") {
-            my $response = HTTP_RESPONSE::GET_OK_200(html_pages::get_html_page("error"));
+            my $response = HttpResponse::GET_OK_200(HtmlPages::get_html_page("error"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         
         } elsif ($uri eq "/favicon.ico") {
-            my $icon_data = html_pages::get_favicon();
-            my $response = HTTP_RESPONSE::GET_OK_200_favicon($icon_data);
+            my $icon_data = HtmlPages::get_favicon();
+            my $response = HttpResponse::GET_OK_200_favicon($icon_data);
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         } else {
-            my $response = HTTP_RESPONSE::NOT_FOUND_404(html_pages::get_html_page("404"));
+            my $response = HttpResponse::NOT_FOUND_404(HtmlPages::get_html_page("404"));
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         }
@@ -282,7 +282,7 @@ sub handle_http_request {
                 if ($user->{display_name} eq $name) {
                     print "User already exists!\n";
                     
-                    my $response = HTTP_RESPONSE::REDIRECT_303(undef, "/error");
+                    my $response = HttpResponse::REDIRECT_303(undef, "/error");
                     send( $client->{socket}, $response, 0 );
                     disconnect_client($fd);
                     return;
@@ -311,12 +311,12 @@ sub handle_http_request {
             $client->{name} = $name;
 
 
-            my $response = HTTP_RESPONSE::REDIRECT_303_with_cookie(undef, "/chat", "name=$name");
+            my $response = HttpResponse::REDIRECT_303_with_cookie(undef, "/chat", "name=$name");
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         } elsif ($uri eq '/logout') {
             my $logout_cookies = "name=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-            my $response = HTTP_RESPONSE::REDIRECT_303_with_cookie(undef, "/profile", $logout_cookies);
+            my $response = HttpResponse::REDIRECT_303_with_cookie(undef, "/profile", $logout_cookies);
             send( $client->{socket}, $response, 0 );
             disconnect_client($fd);
         }
@@ -329,9 +329,9 @@ sub handle_websocket_message {
     my ($fd, $frame) = @_;
     my $client = $epoll{$fd};
 
-    my $message = webSocket_utils::decode_websocket_frame($frame);
+    my $message = WebSocketUtils::decode_websocket_frame($frame);
     if ($message eq "ping") {
-        my $response_frame = webSocket_utils::encode_websocket_frame( 0x1, "pong" );
+        my $response_frame = WebSocketUtils::encode_websocket_frame( 0x1, "pong" );
         send( $client->{socket}, $response_frame, 0 );
         return;
     }
@@ -345,7 +345,7 @@ sub handle_websocket_message {
                 print "Client $broadcast_fd not found\n";
                 next;
             }
-            my $response_frame = webSocket_utils::encode_websocket_frame( 0x1, $message );
+            my $response_frame = WebSocketUtils::encode_websocket_frame( 0x1, $message );
             print "test 1: $broadcast_client->{socket}\n";
             print "test 2: $response_frame\n";
             send( $broadcast_client->{socket}, $response_frame, 0 ) or die "Failed to send message to client: $!\n";
@@ -357,7 +357,7 @@ sub handle_websocket_message {
     send( $client->{socket}, $message, 0 );
 
 
-    # my $response_frame = webSocket_utils::encode_websocket_frame( 0x1, $message );
+    # my $response_frame = WebSocketUtils::encode_websocket_frame( 0x1, $message );
     # send( $client->{socket}, $response_frame, 0 );
 }
 

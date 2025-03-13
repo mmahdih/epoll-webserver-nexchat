@@ -3,12 +3,6 @@ package smtp_server;
 use strict;
 use warnings;
 
-# Importing libraries
-use lib qw(../);
-use lib '.';
-use menu_utils;
-use user_control;
-
 
 # Constructor
 sub new {
@@ -44,12 +38,6 @@ sub start {
     # Implement server start logic here
     print "Server started\n";
 }
-
-
-
-
-
-
 
 
 

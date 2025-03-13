@@ -1,4 +1,4 @@
-package user_control;
+package UserControl;
 
 use strict;
 use warnings;

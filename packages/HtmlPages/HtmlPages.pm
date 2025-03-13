@@ -1,4 +1,4 @@
-package html_pages;
+package HtmlPages;
 
 use strict;
 use warnings;
@@ -8,173 +8,8 @@ sub get_html_page {
     my ($page , $my_username, $receiver_username) = @_;
 
     my $html_page;
-    if ($page eq "index"){
-        $html_page = <<HTML;
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Websocket Server</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
-<body>
-    <h1>Websocket Server</h1>
-    <input type="text" id="message" placeholder="Enter message">
-    <button id="send">Send</button>
-    <input id="slider" type="range">
-    <
-</body>
-</html>
-HTML
-#     } elsif ($page eq "chat") {
-#         $html_page = <<HTML;
-# <!DOCTYPE html>
-# <html lang="en">
-# <head>
-#     <meta charset="UTF-8">
-#     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-#     <title>Chat App</title>
-#     <script src="https://cdn.tailwindcss.com"></script>
-#     <script>
-#         document.addEventListener("DOMContentLoaded", function () {
-#             const chatBox = document.getElementById("chat-box");
-#             const messageInput = document.getElementById("message");
-#             const sendButton = document.getElementById("send");
-#             const sender = document.getElementById("display-name");
-            
-#             const ws = new WebSocket("ws://10.31.1.1:8080/api/messages");
 
-#             ws.onopen = () => {
-#                 console.log("Connected to server");
-#                 let data = {
-#                     my_username: "$my_username",
-#                     friend_username: "$receiver_username"
-#                 };
-#                 ws.send(JSON.stringify(data));
-#                 ws.send("ping");
-#             };
-
-#             ws.onmessage = (event) => {
-
-#                 if (event.data === "pong") {
-#                     const timeout = setTimeout(() => {
-#                         ws.send("ping");
-#                     }, 1000);
-                    
-#                 } else {
-#                     let data = JSON.parse(event.data);
-#                     let sender = data.name;
-#                     let message = data.message;
-
-#                     const messageElement = document.createElement("div");
-#                     messageElement.className = "p-2 bg-gray-200 rounded-lg mb-2 self-start";
-#                     messageElement.textContent = message;
-#                     chatBox.appendChild(messageElement);
-#                     chatBox.scrollTop = chatBox.scrollHeight;
-
-#                     console.log(sender);
-#                     const nameElement = document.createElement("div");
-#                     nameElement.className = "text-xs text-gray-500 mb-2 self-start";
-#                     nameElement.textContent = sender;
-#                     chatBox.appendChild(nameElement);
-#                     chatBox.scrollTop = chatBox.scrollHeight;
-#                 }
-#             };
-
-#             ws.onerror = (error) => {
-#                 console.error(error)
-#                 setTimeout(() => {
-#                     console.log("Attempting to reconnect...");
-#                     ws = new WebSocket("ws://10.31.1.1:8080/api/messages");
-#                 }, 1000);
-#             };
-
-
-#             ws.onclose = () => {
-#                 console.log("Connection closed");
-#                 setTimeout(() => {
-#                     console.log("Attempting to reconnect...");
-#                     ws = new WebSocket("ws://10.31.1.1:8080/api/messages");
-#                 }, 1000);
-#             }
-
-#             messageInput.addEventListener("keyup", (event) => {
-#                 if (event.key === "Enter") {
-#                     sendButton.click();
-#                 }
-#             });
-
-
-
-#             sendButton.addEventListener("click", () => {
-#                 let message = messageInput.value.trim();
-#                 let name = "$my_username";
-#                 let data = {
-#                     sender_username : "$my_username",
-#                     receiver_username : "$receiver_username",
-#                     message : message,
-#                     timestamp : Date.now()
-#                 };
-#                 let jsonData = JSON.stringify(data);
-
-
-#                 if (message) {
-#                     ws.send(jsonData);
-#                     const userMessage = document.createElement("div");
-#                     userMessage.className = "p-2 bg-blue-500 text-white rounded-lg self-end";
-#                     userMessage.textContent = message;
-#                     chatBox.appendChild(userMessage);
-#                     chatBox.scrollTop = chatBox.scrollHeight;
-#                     messageInput.value = "";
-
-#                     let name = "$my_username";
-#                     console.log(name);
-#                     const nameElement = document.createElement("div");
-#                     nameElement.className = "text-xs text-gray-500 mb-2 self-end";
-#                     nameElement.textContent = name;
-#                     chatBox.appendChild(nameElement);
-#                     chatBox.scrollTop = chatBox.scrollHeight;
-#                 }
-#             });
-
-#             const pageAccessedByReload = (
-#             (window.performance.navigation && window.performance.navigation.type === 1) ||
-#                 window.performance
-#                 .getEntriesByType('navigation')
-#                 .map((nav) => nav.type)
-#                 .includes('reload')
-#             );
-
-#             if (pageAccessedByReload) {
-#                 window.location.href = "/";
-#             }
-#         });
-#     </script>
-# </head>
-# <body class="flex items-center justify-center h-screen bg-gray-100">
-#     <div class="w-full max-w-lg bg-white shadow-lg rounded-lg p-6 flex flex-col">
-#         <h1 class="text-2xl font-bold mb-4">Chat App</h1>
-#         <div class="flex flex-row justify-between items-center mb-4">
-#             <div class="flex flex-col items-center">
-#                 <h2 class="font-bold">You</h2>
-#                 <h2 id="display-name" class="text-lg">$my_username</h2>
-#             </div>
-#             <div class="flex flex-col items-center">
-#                 <h2 class="font-bold">Your Friend</h2>
-#                 <h2 id="friend-name" class="text-lg">$receiver_username</h2>
-#             </div>
-#         </div>
-#         <div id="chat-box" class="flex flex-col space-y-2 overflow-y-auto h-64 p-2 border rounded-lg bg-gray-50"></div>
-#         <div class="flex mt-4 space-x-2">
-            
-#             <input id="message" type="text" placeholder="Type a message..." class="flex-1 p-2 border rounded-lg">
-#             <button id="send" class="px-4 py-2 bg-blue-500 text-white rounded-lg">Send</button>
-#         </div>
-#     </div>
-# </body>
-# </html>
-# HTML
-
-    } elsif ($page eq "chat") {
+if ($page eq "chat") {
         $html_page = <<HTML;
 <!DOCTYPE html>
 <html lang="en">
@@ -822,7 +657,7 @@ HTML
 
 
 sub get_favicon {
-    open my $icon, '<', '/home/lapdev/Mein/epoll-webserver-nexchat/bilder/favicon.ico' or die $!;
+    open my $icon, '<', '/home/lapdev/Mein/epoll-webserver-nexchat/Bilder/favicon.ico' or die $!;
     binmode $icon;
 
     my $icon_data = do { local $/; <$icon> };

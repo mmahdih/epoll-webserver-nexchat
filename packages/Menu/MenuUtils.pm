@@ -1,4 +1,4 @@
-package menu_utils;
+package MenuUtils;
 
 use strict;
 use warnings;

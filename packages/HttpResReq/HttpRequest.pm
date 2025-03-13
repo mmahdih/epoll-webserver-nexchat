@@ -1,4 +1,4 @@
-package HTTP_Request;
+package HttpRequest;
 
 use strict;
 use warnings;
