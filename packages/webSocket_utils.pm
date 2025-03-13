@@ -2,6 +2,7 @@ package webSocket_utils;
 
 # use lib qw(packages);  
 use includes;
+use DBI;
 
 
 sub new {
@@ -241,9 +242,6 @@ sub handle_websocket_message {
         send( $client->{socket}, $response_frame, 0 );
     }
 
-    # if ($uri eq "/ws") {
-        # print("MESSAGE ACTION: " . $message->{action} . "\n");
-
         if ( $message->{action} eq 'get_users') {
             # get all users from the users table in the database
             my $sth = $dbh->prepare('SELECT user_id, username, display_name FROM users');
@@ -267,11 +265,8 @@ sub handle_websocket_message {
             my $chat_id = $message->{chat_id};
             my $content = $message->{message};
             my $sender_username = $message->{sender_username};
-            my $sth = $dbh->prepare('SELECT user_id FROM users WHERE username = ?');
-            $sth->execute($sender_username) or die "Select failed: $dbh->errstr()";
-            my $row = $sth->fetchrow_hashref();
-            $sth->finish();
-            my $sender_id = $row ? $row->{user_id} : undef;
+            my $sender_id = $self->get_user_id_by_username($sender_username, $dbh);
+
 
             die "Error: Sender ID not found" unless defined $sender_id;
 
@@ -293,26 +288,14 @@ sub handle_websocket_message {
             # get the receiver_id from json message
             my $receiver_id = $message->{receiver_id}; 
             my $sender_username = $message->{sender_username};
-            my $sth = $dbh->prepare('SELECT user_id FROM users WHERE username = ?');
-            $sth->execute($sender_username) or die "Select failed: $dbh->errstr()";
-            my $row = $sth->fetchrow_hashref();
-            my $sender_id = $row ? $row->{user_id} : undef;
+            my $sender_id = $self->get_user_id_by_username($sender_username, $dbh);
+
 
             die "Error: Sender ID not found" unless defined $sender_id;
 
             print includes::Dumper($message);   
-            $sth = $dbh->prepare('  SELECT c.chat_id
-                                    FROM chats c
-                                    JOIN chat_participants cp1 ON c.chat_id = cp1.chat_id
-                                    JOIN chat_participants cp2 ON c.chat_id = cp2.chat_id
-                                    WHERE c.is_group = false
-                                    AND cp1.user_id = ?
-                                    AND cp2.user_id = ?;
-                                ');
-            $sth->execute($sender_id, $receiver_id) or die "Select failed: $dbh->errstr()";
-            $row = $sth->fetchrow_hashref();
-            $sth->finish();
-            my $chat_id = $row ? $row->{chat_id} : undef;
+           
+            my $chat_id = $self->get_chat_id($dbh, $sender_id, $receiver_id);
 
 
             if (!$chat_id) {
@@ -381,7 +364,6 @@ sub handle_websocket_message {
                 
             }
 
-            # print "User messages: " . Dumper($user_messages) . "\n";
            
 
             my $res = {
@@ -394,10 +376,6 @@ sub handle_websocket_message {
         }
     # }
 }
-
-
-
-
 
 
 
@@ -436,14 +414,36 @@ sub upgrade_to_websocket {
     my $response = $self->handle_websocket_handshake($buffer);
     send( $client->{socket}, $response, 0 );
     $client->{is_websocket} = 1;
-    menu_utils::write_log("INFO", "Socket", "WebSocket connection established");
-    menu_utils::write_log("INFO", "Socket", "Client marked as WebSocket");
 
 }
 
+sub get_username_by_id {
+    my ($self, $user_id, $dbh) = @_;
+    my $sth = $dbh->prepare('SELECT username FROM users WHERE user_id = ?');
+    $sth->execute($user_id) or die "Select failed: $dbh->errstr()";
+    my $row = $sth->fetchrow_hashref();
+    $sth->finish();
+    return $row ? $row->{username} : undef;
+}
+
+sub get_user_id_by_username {
+    my ($self, $username, $dbh) = @_;
+    my $sth = $dbh->prepare('SELECT user_id FROM users WHERE username = ?');
+    $sth->execute($username) or die "Select failed: $dbh->errstr()";
+    my $row = $sth->fetchrow_hashref();
+    $sth->finish();
+    return $row ? $row->{user_id} : undef;
+}
 
 
-
+sub get_chat_id {
+    my ($self, $dbh, $sender_id, $receiver_id) = @_;
+    my $sth = $dbh->prepare('SELECT chat_id FROM chat_participants WHERE user_id = ? AND chat_id IN (SELECT chat_id FROM chat_participants WHERE user_id = ?)');
+    $sth->execute($sender_id, $receiver_id) or die "Select failed: " . $dbh->errstr;
+    my $row = $sth->fetchrow_hashref();
+    $sth->finish();
+    return $row ? $row->{chat_id} : undef;
+}
 
 
 1;

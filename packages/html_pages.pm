@@ -235,6 +235,18 @@ HTML
     // Connect to WebSocket server
     const ws = new WebSocket("ws://" + window.location.host + "/ws");
 
+    console.log("Connecting to server at " + window.location.href );
+    
+    function appendToURL(key, value) {
+        let url = new URL(window.location.href);
+        url.searchParams.set(key, value); // Add or update query param
+        window.history.pushState({}, "", url);
+    }
+
+    
+
+
+ 
     ws.onopen = () => {
         console.log("Connected to server");
         ws.send(JSON.stringify({ action: "ping" }));
@@ -315,6 +327,7 @@ HTML
         let chat_with = document.getElementById('chatWith');
         chat_with.textContent = event.target.getAttribute("data-name");
 
+        appendToURL("username", event.target.getAttribute("data-name"));
         
 
 
